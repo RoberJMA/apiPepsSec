@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <title>Mi Librería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2vw;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-buttons button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5vw;
+            border: none;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            font-size: 0.7vw;
+            margin-right: 0.2vw;
+        }
+
+        .header-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            flex: 1;
+            max-width: 95%;
+            margin: 1vw;
+            padding: 2vw;
+            background-color: white;
+            box-shadow: 0 0 2vw rgba(0, 0, 0, 0.1);
+            border-radius: 1vw;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            /* margin-top: 2vw; */
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1vw;
+            /* border-radius: 1vw; */
+        }
+
+        nav a {
+            flex-grow: 1;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 1vw;
+            border-radius: 0.5vw;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2vw;
+        }
+
+        .book {
+            width: 30%;
+            margin-bottom: 2vw;
+            padding: 1vw;
+            background-color: #f9f9f9;
+            border-radius: 2vw;
+            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1vw;
+            margin-top: auto; /* Hace que el pie de página esté pegado en la parte inferior */
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        .table-container {
+            max-width: 80%;
+            margin: 0 auto; /* Centra la tabla horizontalmente */
+            border-collapse: collapse;
+            margin-top: 2vw;
+        }
+
+        .table-container th, .table-container td {
+            border: 1px solid #ddd;
+            padding: 1vw;
+            text-align: left;
+        }
+
+        .table-container th {
+            background-color: #333;
+            color: white;
+        }
+
+        .table-container tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table-container tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5vw;
+            border: none;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            font-size: 0.6vw;
+        }
+    </style>
+    <script>
+        onload=function(){
+            pedirLibros();
+        }
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+		if (sessionStorage.getItem("csrf_token")){
+	       myHeaders.append("X-CSRFToken", sessionStorage.getItem("csrf_token"));
+	    }
+
+        function pintarLibros(lista){
+            let tbody=document.getElementsByTagName("tbody")[0];
+            tbody.innerHTML="";
+            lista.forEach(libro => {
+                console.log(`URL de la imagen:${libro.imagen}`);
+                tbody.innerHTML+=`<tr>
+                        <td><img src="${libro.imagen}" width="70"></td>
+                        <td>${libro.titulo}</td>
+                        <td>${libro.descripcion}</td>
+                        <td>${libro.precio}</td>
+                        <td>
+                            <a href="/editar_libro.html?id=${libro.id}" class="button is-info">Editar</a>
+                         </td>
+                        <td>
+                            <button class="button is-danger" onclick="eliminarLibro(${libro.id})">Eliminar</button>
+                        </td>
+            </tr>`                            
+            });
+        }
+        function pedirLibros(){
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+            };
+
+            fetch("/api/libros", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status){
+                        location.href="index.html";
+                    } else {
+                        pintarLibros(result);
+                    }
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    alert("Ha habido un error al recuperar los libros. Refresque la página")
+                });
+        }
+        function eliminarLibro(id){
+            var requestOptions = {
+                method: 'DELETE',
+                headers: myHeaders
+            };
+
+            fetch("/api/libros/"+id, requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status == "OK"){
+                        alert("Libro eliminado")
+                        pedirLibros();
+                    } else {
+                        alert("El libro no ha podido ser eliminado")
+                        if (result.status == "Forbidden"){
+                            location.href="index.html";
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    alert("Se ha producido un error y el libro no ha podido ser eliminado")
+				    if (result.status == "Forbidden"){
+                        location.href="/index.html"
+                    }
+                });
+        }
+        function cerrarSesion(){
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders
+            };
+            fetch("/api/logout", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status == "OK"){
+                        location.href="index.html";
+                    } else {
+                        alert("No se ha podido cerrar sesión")
+                    }
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    alert("Se ha producido un error y no se ha podido cerrar sesión")
+                });
+
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Librería</h1>
+        <!-- <div class="header-buttons">
+            <button onclick="window.location.href='inicio_sesion.html'">Iniciar Sesión</button>
+            <button onclick="window.location.href='registro.html'">Registro</button>
+        </div> -->
+    </header>
+    
+    <nav>
+        <a href="#">Thriller</a>
+        <a href="#">Fantasía</a>
+        <a href="#">Romance</a>
+        <a href="#">Terror</a>
+        <a href="#">Ciencia Ficción</a>
+        <a href="#">Novela Contemporanea</a>
+        <a href="#">Novela Historica</a>
+        <a href="agregar_libro.html">Añadir Libro</a>
+        <a href="javascript:cerrarSesion()">Cerrar sesion</a>
+    </nav>
+
+    <main>
+        <p>Bienvenido a Mi Librería. Aquí encontrarás una gran selección de libros.</p>
+        
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <div class="book-container">
+            <div class="book">
+                <h2>Libro 1</h2>
+                <p>Descripción del Libro 1.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 2</h2>
+                <p>Descripción del Libro 2.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 3</h2>
+                <p>Descripción del Libro 3.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 4</h2>
+                <p>Descripción del Libro 4.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 5</h2>
+                <p>Descripción del Libro 5.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 6</h2>
+                <p>Descripción del Libro 6.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 7</h2>
+                <p>Descripción del Libro 7.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 8</h2>
+                <p>Descripción del Libro 8.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 9</h2>
+                <p>Descripción del Libro 9.</p>
+            </div>  -->
+
+        <!-- </div> -->
+    </main>
+
+    <footer>
+        <p><a href="#top">Volver Arriba</a></p>
+        <p>Datos de Contacto: ejemplo@libreria.com | Teléfono: 123-456-7890</p>
+    </footer>
+
+</body>
+</html>

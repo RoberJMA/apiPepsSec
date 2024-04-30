@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <title>Añadir Libro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        div {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        if (sessionStorage.getItem("csrf_token")){
+            myHeaders.append("X-CSRFToken",sessionStorage.getItem("csrf_token"));
+        }
+
+        function guardar(){
+             let titulo=document.getElementById("titulo").value;
+            let descripcion=document.getElementById("descripcion").value;
+            let precio=document.getElementById("precio").value;
+            let imagen=document.getElementById("imagen").value;
+            let datos=JSON.stringify({
+                "titulo":titulo,
+                "descripcion":descripcion,
+                "precio": precio,
+                "imagen":imagen
+            });
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: datos
+            };
+
+            fetch("/api/libros", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if (result.status == "OK"){
+                        alert("Libro guardado")
+                        location.href="/libros.html"
+                    } else {
+                        alert("El libro no ha podido ser guardado")
+                        if (result.status == "Forbidden"){
+                            location.href="/index.html";
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    alert("Se ha producido un error y el libro no ha podido ser guardado")
+                });
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Añadir Libro</h2>
+
+    <div>
+        <label for="titulo">Título del Libro:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+
+        <label for="precio">Precio del Libro:</label>
+        <input ttype="number" step="any" id="precio" name="precio" required>
+
+        <label for="imagen">Imagen del Libro:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+        <button type="button" onclick="guardar()" class="button is-success mt-2">Añadir Libro</button>
+        <a href="libros.html" class="button">Volver</a>
+    </div>
+
+</body>
+</html>

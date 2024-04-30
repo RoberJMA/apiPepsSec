@@ -1,0 +1,143 @@
+[2024-04-14 14:22:16,805] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.19.0.3:8080
+[2024-04-14 14:22:16,807] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 14:22:46,873] INFO in rutas_inicio: Nuevo usuario creado
+[2024-04-14 14:22:46,874] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:22:46,875] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:22:46] "POST /registro HTTP/1.1" 200 -
+[2024-04-14 14:22:52,693] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:22:52,754] INFO in rutas_inicio: clave bien
+[2024-04-14 14:22:52,756] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:22:52,757] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:22:52] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:22:52,872] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.19.0.5
+[2024-04-14 14:22:52,872] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:22:52] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:23:07,273] INFO in app: path: /libros | method: POST | status: 403 FORBIDDEN | size: 23 >>> 172.19.0.5
+[2024-04-14 14:23:07,273] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:07] "[31m[1mPOST /libros HTTP/1.1[0m" 403 -
+[2024-04-14 14:23:37,264] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:23:37,322] INFO in rutas_inicio: clave bien
+[2024-04-14 14:23:37,324] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:23:37,329] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:37] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:23:37,460] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.19.0.5
+[2024-04-14 14:23:37,461] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:37] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:23:48,373] INFO in app: path: /libros | method: POST | status: 401 UNAUTHORIZED | size: 27 >>> 172.19.0.5
+[2024-04-14 14:23:48,374] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:48] "[31m[1mPOST /libros HTTP/1.1[0m" 401 -
+[2024-04-14 14:23:51,603] INFO in app: path: /libros | method: POST | status: 401 UNAUTHORIZED | size: 27 >>> 172.19.0.5
+[2024-04-14 14:23:51,603] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:51] "[31m[1mPOST /libros HTTP/1.1[0m" 401 -
+[2024-04-14 14:23:55,793] INFO in app: path: /libros | method: POST | status: 401 UNAUTHORIZED | size: 27 >>> 172.19.0.5
+[2024-04-14 14:23:55,793] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:23:55] "[31m[1mPOST /libros HTTP/1.1[0m" 401 -
+[2024-04-14 14:24:15,185] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:24:15,253] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:24:15,254] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:15] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:24:16,094] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:24:16,153] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:24:16,154] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:16] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:24:19,912] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:24:19,972] INFO in rutas_inicio: clave bien
+[2024-04-14 14:24:19,974] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:24:19,975] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:19] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:24:20,126] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.19.0.5
+[2024-04-14 14:24:20,127] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:20] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:24:31,287] INFO in app: path: /libros | method: POST | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:24:31,287] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:31] "POST /libros HTTP/1.1" 200 -
+[2024-04-14 14:24:32,560] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:24:32,560] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:32] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:24:33,476] INFO in app: path: /libro/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2024-04-14 14:24:33,478] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:33] "[35m[1mGET /libro/1 HTTP/1.1[0m" 500 -
+[2024-04-14 14:24:35,496] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:24:35,497] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:35] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:24:43,714] INFO in app: path: /libro/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2024-04-14 14:24:43,715] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:43] "[35m[1mGET /libro/1 HTTP/1.1[0m" 500 -
+[2024-04-14 14:24:47,556] INFO in app: path: /libro/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2024-04-14 14:24:47,556] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:47] "[35m[1mGET /libro/1 HTTP/1.1[0m" 500 -
+[2024-04-14 14:24:48,775] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:24:48,776] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:24:48] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:30:39,928] INFO in rutas_inicio: Usuario root clave erronea
+[2024-04-14 14:30:39,987] INFO in rutas_inicio: clave bien
+[2024-04-14 14:30:39,989] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:30:39,990] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:30:39] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:30:40,227] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:30:40,228] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:30:40] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:30:41,844] INFO in app: path: /libro/1 | method: GET | status: 500 INTERNAL SERVER ERROR | size: 2 >>> 172.19.0.5
+[2024-04-14 14:30:41,845] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:30:41] "[35m[1mGET /libro/1 HTTP/1.1[0m" 500 -
+[2024-04-14 14:38:31,211] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.19.0.3:8080
+[2024-04-14 14:38:31,219] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 14:38:36,694] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:38:36,695] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:38:36] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:39:54,181] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:39:54,245] INFO in rutas_inicio: clave bien
+[2024-04-14 14:39:54,247] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:39:54,248] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:39:54] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:39:54,372] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:39:54,372] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:39:54] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:39:56,241] INFO in app: path: /libro/1 | method: GET | status: 200 OK | size: 149 >>> 172.19.0.5
+[2024-04-14 14:39:56,244] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:39:56] "GET /libro/1 HTTP/1.1" 200 -
+[2024-04-14 14:41:20,401] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:41:20,401] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:41:20] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:41:28,492] INFO in app: path: /libros | method: GET | status: 403 FORBIDDEN | size: 23 >>> 172.19.0.5
+[2024-04-14 14:41:28,493] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:41:28] "[31m[1mGET /libros HTTP/1.1[0m" 403 -
+[2024-04-14 14:41:32,590] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-14 14:41:32,646] INFO in rutas_inicio: clave bien
+[2024-04-14 14:41:32,648] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:41:32,649] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:41:32] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:41:32,840] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:41:32,840] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:41:32] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:41:34,490] INFO in app: path: /libro/1 | method: GET | status: 200 OK | size: 149 >>> 172.19.0.5
+[2024-04-14 14:41:34,491] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:41:34] "GET /libro/1 HTTP/1.1" 200 -
+[2024-04-14 14:49:09,996] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.19.0.3:8080
+[2024-04-14 14:49:09,996] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-14 14:49:23,753] INFO in app: path: /libros | method: GET | status: 200 OK | size: 151 >>> 172.19.0.5
+[2024-04-14 14:49:23,753] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:23] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:49:31,532] INFO in app: path: /libro/1 | method: GET | status: 200 OK | size: 149 >>> 172.19.0.5
+[2024-04-14 14:49:31,533] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:31] "GET /libro/1 HTTP/1.1" 200 -
+[2024-04-14 14:49:36,029] INFO in app: path: /libro/1 | method: GET | status: 200 OK | size: 149 >>> 172.19.0.5
+[2024-04-14 14:49:36,030] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:36] "GET /libro/1 HTTP/1.1" 200 -
+[2024-04-14 14:49:49,269] INFO in app: path: /libros | method: PUT | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:49:49,269] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:49] "PUT /libros HTTP/1.1" 200 -
+[2024-04-14 14:49:50,621] INFO in app: path: /libros | method: GET | status: 200 OK | size: 152 >>> 172.19.0.5
+[2024-04-14 14:49:50,621] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:50] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:49:52,446] INFO in app: path: /libros/1 | method: DELETE | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:49:52,447] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:52] "DELETE /libros/1 HTTP/1.1" 200 -
+[2024-04-14 14:49:53,631] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.19.0.5
+[2024-04-14 14:49:53,632] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:49:53] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:52:35,786] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:52:35,786] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:52:35] "GET /logout HTTP/1.1" 200 -
+[2024-04-14 14:52:40,932] INFO in rutas_inicio: Nuevo usuario creado
+[2024-04-14 14:52:40,933] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.19.0.5
+[2024-04-14 14:52:40,934] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:52:40] "POST /registro HTTP/1.1" 200 -
+[2024-04-14 14:52:46,742] INFO in rutas_inicio: Usuario adios clave erronea
+[2024-04-14 14:52:46,799] INFO in rutas_inicio: clave bien
+[2024-04-14 14:52:46,801] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.19.0.5
+[2024-04-14 14:52:46,802] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:52:46] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:52:46,930] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.19.0.5
+[2024-04-14 14:52:46,931] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:52:46] "GET /libros HTTP/1.1" 200 -
+[2024-04-14 14:52:56,589] INFO in app: path: /libros | method: POST | status: 403 FORBIDDEN | size: 23 >>> 172.19.0.5
+[2024-04-14 14:52:56,590] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:52:56] "[31m[1mPOST /libros HTTP/1.1[0m" 403 -
+[2024-04-14 14:54:28,222] INFO in rutas_inicio: Usuario adios clave erronea
+[2024-04-14 14:54:28,281] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:28,282] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:28] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:29,256] INFO in rutas_inicio: Usuario adios clave erronea
+[2024-04-14 14:54:29,315] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:29,316] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:29] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:29,532] INFO in rutas_inicio: Usuario adios clave erronea
+[2024-04-14 14:54:29,590] INFO in rutas_inicio: Usuario adios bloqueado
+[2024-04-14 14:54:29,592] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:29,593] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:29] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:29,693] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:29,694] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:29] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:29,849] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:29,849] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:29] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:29,980] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:29,980] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:29] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:30,126] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:30,126] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:30] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:30,276] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:30,277] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:30] "POST /login HTTP/1.1" 200 -
+[2024-04-14 14:54:30,418] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.19.0.5
+[2024-04-14 14:54:30,419] INFO in _internal: 172.19.0.5 - - [14/Apr/2024 14:54:30] "POST /login HTTP/1.1" 200 -

@@ -1,0 +1,473 @@
+[2024-03-28 22:45:50,268] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 22:45:50,269] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 22:48:16,783] INFO in app: path: /registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-03-28 22:48:16,784] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 22:48:16] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
+[2024-03-28 23:01:06,347] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-03-28 23:01:06,352] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:12:38,173] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:12:38,173] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:20:45,295] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:20:45,297] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:23:21,802] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:23:21,805] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:25:48,059] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-03-28 23:25:48,060] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:29:25,290] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-03-28 23:29:25,290] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:30:58,078] INFO in app: path: /registro | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-03-28 23:30:58,079] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:30:58] "[35m[1mPOST /registro HTTP/1.1[0m" 500 -
+[2024-03-28 23:39:13,459] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-03-28 23:39:13,459] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:39:49,381] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-03-28 23:39:49,382] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:39:49] "POST /registro HTTP/1.1" 200 -
+[2024-03-28 23:40:04,973] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:40:04,974] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:40:04,974] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 21 >>> 172.20.0.5
+[2024-03-28 23:40:04,975] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:40:04] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:44:21,294] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-03-28 23:44:21,299] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:44:31,455] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:44:31,457] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:44:31,458] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 21 >>> 172.20.0.5
+[2024-03-28 23:44:31,460] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:44:31] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:47:42,099] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:47:42,101] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:47:46,896] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 15, in login
+    username = libro_json.get['username']
+TypeError: 'builtin_function_or_method' object is not subscriptable
+[2024-03-28 23:47:46,897] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 15, in login
+    username = libro_json.get['username']
+TypeError: 'builtin_function_or_method' object is not subscriptable
+[2024-03-28 23:47:46,898] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 21 >>> 172.20.0.5
+[2024-03-28 23:47:46,898] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:47:46] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:49:05,309] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:49:05,309] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:49:14,982] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:49:14,983] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 38, in login
+    return json.dumps(ret), code
+UnboundLocalError: local variable 'ret' referenced before assignment
+[2024-03-28 23:49:14,984] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 21 >>> 172.20.0.5
+[2024-03-28 23:49:14,985] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:49:14] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:50:58,846] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:50:58,848] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:51:08,721] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-03-28 23:51:08,722] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:51:08] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:51:41,858] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-03-28 23:51:41,858] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:51:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:55:11,438] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:55:11,439] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:55:36,868] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-03-28 23:55:36,869] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:55:36] "POST /registro HTTP/1.1" 200 -
+[2024-03-28 23:55:49,131] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/app/rutas_inicio.py", line 30, in login
+    if usuario and compare_password(password, usuario[1]):  # Verificar si usuario no es None
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 35, in login
+    except pymysql.Error as e:  # Manejar excepciones específicas de pymysql
+NameError: name 'pymysql' is not defined
+[2024-03-28 23:55:49,132] ERROR in app: An exception occurred during a request.
+Traceback (most recent call last):
+  File "/app/rutas_inicio.py", line 30, in login
+    if usuario and compare_password(password, usuario[1]):  # Verificar si usuario no es None
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/app/rutas_inicio.py", line 35, in login
+    except pymysql.Error as e:  # Manejar excepciones específicas de pymysql
+NameError: name 'pymysql' is not defined
+[2024-03-28 23:55:49,133] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 21 >>> 172.20.0.5
+[2024-03-28 23:55:49,133] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:55:49] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-03-28 23:57:13,084] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-03-28 23:57:13,085] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-03-28 23:57:22,241] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-03-28 23:57:22,241] INFO in _internal: 172.20.0.5 - - [28/Mar/2024 23:57:22] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-01 14:46:51,030] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-01 14:46:51,073] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-01 14:47:08,129] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-01 14:47:08,133] INFO in _internal: 172.20.0.5 - - [01/Apr/2024 14:47:08] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 08:33:33,914] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-04-04 08:33:33,915] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 08:34:58,198] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 08:34:58,198] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:34:58] "POST /registro HTTP/1.1" 200 -
+[2024-04-04 08:35:13,560] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 08:35:13,561] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:35:13] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 08:36:58,326] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 08:36:58,327] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:36:58] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 08:37:44,504] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 08:37:44,507] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 08:37:54,958] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 08:37:54,958] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:37:54] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 08:38:04,822] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 08:38:04,823] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:38:04] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 08:40:18,734] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 08:40:18,734] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 08:40:18] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:33:51,435] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 10:33:51,435] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 10:35:07,756] INFO in rutas_inicio: Nuevo usuario creado
+[2024-04-04 10:35:07,757] INFO in app: path: /registro | method: POST | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 10:35:07,758] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:35:07] "POST /registro HTTP/1.1" 200 -
+[2024-04-04 10:35:18,145] INFO in rutas_inicio: clave bien
+[2024-04-04 10:35:18,146] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 125 >>> 172.20.0.5
+[2024-04-04 10:35:18,146] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:35:18] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:35:18,203] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:35:18,204] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:35:18] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:36:01,250] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:36:01,251] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:36:01] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:36:04,592] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:36:04,593] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:36:04] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:36:11,213] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:36:11,213] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:36:11] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:36:34,139] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:36:34,140] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:36:34] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:38:45,554] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:38:45,555] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:38:45] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:39:11,951] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:39:11,952] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:39:11] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:43:03,373] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:43:03,374] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:43:03] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:43:52,640] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:43:52,641] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:43:52] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:44:13,437] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:44:13,437] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:44:13] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:46:05,792] INFO in rutas_inicio: clave bien
+[2024-04-04 10:46:05,793] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 125 >>> 172.20.0.5
+[2024-04-04 10:46:05,793] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:46:05] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:46:05,833] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:46:05,834] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:46:05] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:46:24,845] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:46:24,845] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:46:24] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:47:54,636] INFO in app: path: /libros | method: POST | status: 400 BAD REQUEST | size: 117 >>> 172.20.0.5
+[2024-04-04 10:47:54,636] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:47:54] "[31m[1mPOST /libros HTTP/1.1[0m" 400 -
+[2024-04-04 10:50:36,135] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:50:36,135] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:50:36] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:50:37,875] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 10:50:37,875] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:50:37] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 10:50:51,380] INFO in rutas_inicio: clave bien
+[2024-04-04 10:50:51,381] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 125 >>> 172.20.0.5
+[2024-04-04 10:50:51,382] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:50:51] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:50:51,528] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:50:51,528] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:50:51] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:52:38,595] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-04-04 10:52:38,595] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 10:52:43,488] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:52:43,488] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:52:43] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:52:47,491] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 10:52:47,491] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:52:47] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 10:52:53,410] INFO in rutas_inicio: clave bien
+[2024-04-04 10:52:53,411] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 125 >>> 172.20.0.5
+[2024-04-04 10:52:53,411] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:52:53] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:52:53,515] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 10:52:53,516] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:52:53] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 10:57:17,884] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 10:57:17,885] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 10:57:25,229] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 10:57:25,230] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:57:25] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 10:57:33,395] INFO in rutas_inicio: clave bien
+[2024-04-04 10:57:33,396] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 10:57:33,397] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:57:33] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 10:59:27,572] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 10:59:27,573] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 10:59:33,857] INFO in rutas_inicio: clave bien
+[2024-04-04 10:59:33,857] INFO in rutas_inicio: Usuario ok
+[2024-04-04 10:59:33,858] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 10:59:33,859] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 10:59:33] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 11:02:50,372] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-04-04 11:02:50,373] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:02:57,948] INFO in rutas_inicio: clave bien
+[2024-04-04 11:02:57,949] INFO in rutas_inicio: datos 0 2024-00-04 activo hola
+[2024-04-04 11:02:57,950] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 11:02:57,951] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:02:57] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 11:03:50,846] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:03:50,853] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:03:55,226] INFO in rutas_inicio: clave bien
+[2024-04-04 11:03:55,226] INFO in rutas_inicio: datos 0 2024-04-04 activo hola
+[2024-04-04 11:03:55,227] INFO in app: path: /login | method: POST | status: 500 INTERNAL SERVER ERROR | size: 19 >>> 172.20.0.5
+[2024-04-04 11:03:55,228] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:03:55] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2024-04-04 11:09:15,836] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:09:15,836] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:09:20,525] INFO in rutas_inicio: clave bien
+[2024-04-04 11:09:20,526] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:09:20,526] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:09:20] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:09:20,658] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 11:09:20,658] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:09:20] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:09:43,664] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 11:09:43,664] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:09:43] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 11:10:54,924] INFO in rutas_inicio: clave bien
+[2024-04-04 11:10:54,925] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:10:54,926] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:10:54] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:11:41,411] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:11:41,411] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:11:46,534] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 11:11:46,534] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:11:46] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:11:49,162] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 11:11:49,162] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:11:49] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 11:12:01,465] INFO in rutas_inicio: clave bien
+[2024-04-04 11:12:01,466] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:12:01,466] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:12:01] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:12:01,598] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 11:12:01,599] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:12:01] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:12:39,736] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.4:8080
+[2024-04-04 11:12:39,737] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:12:51,836] INFO in rutas_inicio: clave bien
+[2024-04-04 11:12:51,837] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:12:51,838] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:12:51] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:12:51,959] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 11:12:51,959] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:12:51] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:14:52,936] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:14:52,936] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:15:17,542] INFO in app: path: /libros | method: POST | status: 403 FORBIDDEN | size: 23 >>> 172.20.0.5
+[2024-04-04 11:15:17,542] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:15:17] "[31m[1mPOST /libros HTTP/1.1[0m" 403 -
+[2024-04-04 11:16:41,151] INFO in rutas_inicio: clave bien
+[2024-04-04 11:16:41,152] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:16:41,153] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:16:41] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:16:41,303] INFO in app: path: /libros | method: GET | status: 200 OK | size: 2 >>> 172.20.0.5
+[2024-04-04 11:16:41,303] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:16:41] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:16:51,204] INFO in app: path: /libros | method: POST | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 11:16:51,204] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:16:51] "POST /libros HTTP/1.1" 200 -
+[2024-04-04 11:16:52,673] INFO in app: path: /libros | method: GET | status: 200 OK | size: 147 >>> 172.20.0.5
+[2024-04-04 11:16:52,674] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:16:52] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:18:12,021] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 11:18:12,022] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:12] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 11:18:17,124] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:18:17,125] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:17] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:18:18,106] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:18:18,106] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:18] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:18:19,000] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:18:19,000] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:19] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:18:20,002] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:18:20,003] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:20] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:18:26,220] INFO in rutas_inicio: clave bien
+[2024-04-04 11:18:26,221] INFO in app: path: /login | method: POST | status: 200 OK | size: 125 >>> 172.20.0.5
+[2024-04-04 11:18:26,222] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:26] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:18:26,348] INFO in app: path: /libros | method: GET | status: 200 OK | size: 147 >>> 172.20.0.5
+[2024-04-04 11:18:26,348] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:18:26] "GET /libros HTTP/1.1" 200 -
+[2024-04-04 11:19:50,779] INFO in app: path: /logout | method: GET | status: 200 OK | size: 16 >>> 172.20.0.5
+[2024-04-04 11:19:50,779] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:19:50] "GET /logout HTTP/1.1" 200 -
+[2024-04-04 11:19:56,882] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:19:56,883] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:19:56] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:21:44,449] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:21:44,450] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:21:47,214] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-04 11:21:47,271] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:21:47,271] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:21:47] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:22:36,375] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-04 11:22:36,423] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:22:36,423] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:22:36] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:24:08,673] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.3:8080
+[2024-04-04 11:24:08,673] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-04-04 11:24:13,819] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-04 11:24:13,880] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:24:13,881] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:24:13] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:24:29,108] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-04 11:24:29,163] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:24:29,164] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:24:29] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:24:29,728] INFO in rutas_inicio: Usuario hola clave erronea
+[2024-04-04 11:24:29,790] INFO in rutas_inicio: Usuario hola bloqueado
+[2024-04-04 11:24:29,791] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:24:29,791] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:24:29] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:24:30,389] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:24:30,389] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:24:30] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:26:35,944] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:26:35,944] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:26:35] "POST /login HTTP/1.1" 200 -
+[2024-04-04 11:26:36,616] INFO in app: path: /login | method: POST | status: 200 OK | size: 55 >>> 172.20.0.5
+[2024-04-04 11:26:36,616] INFO in _internal: 172.20.0.5 - - [04/Apr/2024 11:26:36] "POST /login HTTP/1.1" 200 -
